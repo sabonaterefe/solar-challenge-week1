@@ -21,6 +21,7 @@ class TestUtils(unittest.TestCase):
 
         # Strip whitespace from column names
         combined_data.columns = combined_data.columns.str.strip()
+        print(combined_data.head())
         
         self.assertIsInstance(combined_data, pd.DataFrame, "Combined data is not a DataFrame.")
         self.assertFalse(combined_data.empty, "Combined data is empty.")
