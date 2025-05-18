@@ -4,6 +4,7 @@ import os
 from app.utils import load_data
 
 class TestUtils(unittest.TestCase):
+
     def test_load_data_multiple_files(self):
         files = [
             "data/benin_clean.csv",

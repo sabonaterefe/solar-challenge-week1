@@ -9,7 +9,7 @@ from utils import load_data
 st.title("Data Insights Dashboard")
 
 # Load data from multiple CSV files
-data_files = ["../data/benin_clean.csv", "../data/sierraleone_clean.csv", "../data/togo_clean.csv"]
+data_files = ["data/benin_clean.csv", "data/sierraleone_clean.csv", "data/togo_clean.csv"]
 data = pd.concat([load_data(file) for file in data_files], ignore_index=True)
 
 # Widget for country selection
