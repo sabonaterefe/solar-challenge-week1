@@ -1,2 +1,11 @@
+# Data
 data/
 *.csv
+
+# Environments
+venv/
+.env
+
+# IDE
+.vscode/
+.ipynb_checkpoints/
