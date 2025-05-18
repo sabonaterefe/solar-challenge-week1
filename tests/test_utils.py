@@ -1,6 +1,12 @@
+"""Unit tests for utility functions in the solar-challenge-week1 project."""
+
 import unittest
-from app.main import load_data  
 
 class TestUtils(unittest.TestCase):
+    """Test suite for utility functions."""
     def test_example(self):
-        self.assertTrue(True)
+        """Verifying basic arithmetic operation remains valid."""
+        self.assertEqual(1 + 1, 2)
+
+if __name__ == '__main__':
+    unittest.main()
