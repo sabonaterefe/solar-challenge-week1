@@ -13,5 +13,3 @@ venv/
 venv/
 # pytest cache
 .pytest_cache/
-__pycache__/
-*.pyc

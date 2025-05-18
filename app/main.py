@@ -28,6 +28,9 @@ if 'GHI' in data.columns:
     sns.boxplot(x=data['GHI'])
     st.pyplot(plt)
 else:
+
+
+    
     st.warning("The dataset does not contain a 'GHI' column.")
 
 if 'Comments' in data.columns:
