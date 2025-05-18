@@ -21,20 +21,20 @@ class TestUtils(unittest.TestCase):
         self.assertIsInstance(combined_data, pd.DataFrame)
         self.assertFalse(combined_data.empty, "Combined DataFrame should not be empty")
         
-        # Debug output for columns
+    
         print("\n=== Actual Columns in Combined Data ===")
         print(combined_data.columns.tolist())
         
-        # CORRECTED EXPECTED COLUMNS (matches your actual CSV headers)
+      
         expected_columns = {
             'GHI', 
             'DNI', 
             'DHI', 
-            'ModA',  # ✅ Matches actual column name
-            'ModB'   # ✅ Matches actual column name
+            'ModA', 
+            'ModB'  
         }
         
-        # Column validation
+ 
         missing_columns = expected_columns - set(combined_data.columns)
         self.assertEqual(
             len(missing_columns), 0,
