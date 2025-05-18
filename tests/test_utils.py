@@ -15,6 +15,9 @@ class TestUtils(unittest.TestCase):
             ignore_index=True
         )
         
+        # Strip whitespace from column names
+        combined_data.columns = combined_data.columns.str.strip()
+        
         self.assertIsInstance(combined_data, pd.DataFrame)
         self.assertFalse(combined_data.empty)
         
