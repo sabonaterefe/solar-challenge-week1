@@ -46,6 +46,12 @@ class TestUtils(unittest.TestCase):
         numeric_columns = ['GHI', 'DNI', 'DHI', 'ModA', 'ModB', 'BP', 'TModA', 'TModB']
         combined_data[numeric_columns] = combined_data[numeric_columns].astype(float)
 
+        correct_order = [
+            "Timestamp", "GHI", "DNI", "DHI", "ModA", "ModB", "Tamb", "RH", "WS", "WSgust",
+            "WSstdev", "WD", "WDstdev", "BP", "Cleaning", "Precipitation", "TModA", "TModB", "outlier"
+        ]
+        combined_data = combined_data[correct_order]
+
         for col in expected_columns:
             self.assertIn(col, combined_data.columns, f"Expected column {col} is missing.")
             self.assertTrue(pd.api.types.is_numeric_dtype(combined_data[col]), f"Column {col} is not numeric.")
