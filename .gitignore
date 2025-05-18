@@ -11,5 +11,5 @@ venv/
 .ipynb_checkpoints/
 # Python virtual environment
 venv/
-# pytest cache
+
 .pytest_cache/
