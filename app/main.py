@@ -30,7 +30,6 @@ if 'GHI' in data.columns:
 else:
     st.warning("The dataset does not contain a 'GHI' column.")
 
-# Ensuring 'Comments' column exists
 if 'Comments' in data.columns:
     st.subheader("Sample Comments in Data")
     st.write(data['Comments'].dropna().head(10))
